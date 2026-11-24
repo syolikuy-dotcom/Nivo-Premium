@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["es2022"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "dist",
+    "rootDir": "src",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "useUnknownInCatchVariables": false,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "sourceMap": false,
+    "removeComments": true,
+    "types": ["node"]
+  },
+  "include": ["src/server/**/*.ts", "src/shared/**/*.ts"],
+  "exclude": ["src/shared/api-client.ts", "src/shared/usePoll.ts", "src/shared/protect.ts"]
+}
