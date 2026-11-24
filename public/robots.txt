@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+Allow: /media/
+Disallow: /api/
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /account
+Disallow: /orders
+Disallow: /deposit
+Disallow: /am
+Disallow: /checkout
+Disallow: /login
+Disallow: /register
+Disallow: /forgot-password
+Disallow: /reset-password
+
+Sitemap: __APP_URL__/sitemap.xml
