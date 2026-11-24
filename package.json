@@ -1,0 +1,65 @@
+{
+  "name": "nivo-premium",
+  "version": "3.3.5",
+  "private": true,
+  "description": "Nivo Premium - toko produk digital (Next.js full-stack, React + TypeScript; satu server satu port)",
+  "keywords": [
+    "nivo premium",
+    "nivopremium",
+    "toko produk digital",
+    "akun premium",
+    "aplikasi premium",
+    "akun instan",
+    "alight motion premium",
+    "qris"
+  ],
+  "homepage": "https://premku.nivotech.biz.id",
+  "author": "Nivo Premium",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "NODE_ENV=development node index.js",
+    "build": "npm run build:server && next build",
+    "build:server": "tsc -p tsconfig.server.json",
+    "start": "node index.js",
+    "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.server.json",
+    "check": "node scripts/check-api.js",
+    "test": "npm run build:server && node --test tests/*.test.js",
+    "migrate": "node scripts/migrate.js",
+    "create-admin": "node scripts/create-admin.js",
+    "gen-secrets": "node scripts/gen-secrets.js",
+    "test:integration": "npm run build:server && node --test tests/integration/*.it.js"
+  },
+  "dependencies": {
+    "@node-rs/argon2": "^2.2.2",
+    "@tanstack/react-query": "^5.105.0",
+    "@types/cookie": "^0.6.0",
+    "@types/node": "^20.17.0",
+    "@types/nodemailer": "^6.4.16",
+    "@types/qrcode": "^1.5.5",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "autoprefixer": "^10.4.20",
+    "clsx": "^2.1.1",
+    "cookie": "^0.7.2",
+    "dotenv": "^16.4.5",
+    "framer-motion": "^11.11.17",
+    "mysql2": "^3.11.3",
+    "next": "15.5.28",
+    "nodemailer": "^10.2.1",
+    "postcss": "^8.5.23",
+    "qrcode": "^1.5.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^3.7.0",
+    "tailwindcss": "^3.4.14",
+    "typescript": "^5.6.3",
+    "zod": "^4.6.7"
+  },
+  "overrides": {
+    "postcss": "$postcss",
+    "postcss-selector-parser": "^7.1.7"
+  }
+}
